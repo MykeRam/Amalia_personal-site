@@ -6,19 +6,15 @@ export const sections = [
 
 export const heroContent = {
   eyebrow: "Piedmont Airlines First Officer",
+  fullName: "Amalia",
   title: "Poised in the cockpit, grounded in purpose.",
   description:
-    "This single-page site introduces Amalia as an aviator, teammate, and future resource for students who want a clearer path into aviation.",
-  ctaLabel: "Read About Amalia",
-  secondaryCtaLabel: "Browse Gallery",
-  focusLabel: "Current Focus",
-  focusTitle:
-    "Flying professionally while building space to mentor the next generation.",
-  facts: [
-    "First Officer at Piedmont Airlines",
-    "Calm, disciplined, detail-oriented flight deck mindset",
-    "Student resources section planned for a future update"
-  ]
+    "Aviation professional, mentor in the making, and a steady presence in the flight deck.",
+  bookingLabel: "Book a Call",
+  bookingLink: "",
+  imageSrc:
+    "https://images.unsplash.com/photo-1747751994930-c1e2f52a4577?auto=format&fit=crop&w=1800&q=80",
+  imageAlt: "Passenger airplane flying through a clear blue sky"
 };
 
 export const aboutCards = [

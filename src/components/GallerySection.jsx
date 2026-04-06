@@ -1,4 +1,5 @@
 import useReveal from "../hooks/useReveal";
+import "./GallerySection.css";
 
 function GallerySection({ filters, items, activeFilter, onFilterChange }) {
   const { ref, isVisible } = useReveal();

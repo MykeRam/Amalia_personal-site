@@ -1,3 +1,5 @@
+import "./SiteHeader.css";
+
 function SiteHeader({ sections, activeSection, onNavigate }) {
   return (
     <header className="site-header">

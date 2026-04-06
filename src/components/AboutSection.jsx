@@ -1,4 +1,5 @@
 import useReveal from "../hooks/useReveal";
+import "./AboutSection.css";
 
 function AboutSection({ cards }) {
   const { ref, isVisible } = useReveal();

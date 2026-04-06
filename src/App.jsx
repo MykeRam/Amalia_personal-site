@@ -11,6 +11,7 @@ import Hero from "./components/Hero";
 import AboutSection from "./components/AboutSection";
 import GallerySection from "./components/GallerySection";
 import SiteFooter from "./components/SiteFooter";
+import "./App.css";
 
 function App() {
   const [activeSection, setActiveSection] = useState("top");
