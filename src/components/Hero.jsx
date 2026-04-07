@@ -31,7 +31,7 @@ function Hero({ content, onNavigate }) {
       return;
     }
 
-    onNavigate("about");
+    onNavigate("calendar");
   };
 
   return (
@@ -68,14 +68,6 @@ function Hero({ content, onNavigate }) {
 
         <div className="hero-overlay">
           <div className="hero-copy">
-            {content.portraitSrc ? (
-              <img
-                className="hero-portrait"
-                src={content.portraitSrc}
-                alt={content.portraitAlt}
-              />
-            ) : null}
-            <p className="eyebrow hero-eyebrow">{content.eyebrow}</p>
             <h1 className="hero-name">{content.fullName}</h1>
             <p className="hero-title">{content.title}</p>
             <p className="hero-text">{content.description}</p>

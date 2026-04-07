@@ -2,7 +2,7 @@ import React from "react";
 import useReveal from "../hooks/useReveal";
 import "./AboutSection.css";
 
-function AboutSection({ cards }) {
+function AboutSection({ content }) {
   const { ref, isVisible } = useReveal();
 
   return (
@@ -12,22 +12,32 @@ function AboutSection({ cards }) {
       ref={ref}
     >
       <div className="section-heading">
-        <p className="eyebrow">About Section</p>
         <h2>About</h2>
       </div>
 
-      <div className="about-grid">
-        {cards.map((card) => (
-          <article
-            key={card.title ?? "about-intro"}
-            className={`about-panel${card.featured ? " about-panel-primary" : ""}`}
-          >
-            {card.title ? <h3>{card.title}</h3> : null}
-            {card.paragraphs.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-          </article>
-        ))}
+      <div className="about-layout">
+        <figure className="about-portrait-wrap">
+          <img
+            className="about-portrait"
+            src={content.imageSrc}
+            alt={content.imageAlt}
+          />
+        </figure>
+
+        <article className="about-copy">
+          {content.paragraphs.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+
+          <div className="about-qualifications">
+            <h3>Qualifications</h3>
+            <ul className="about-qualification-list">
+              {content.qualifications.map((qualification) => (
+                <li key={qualification}>{qualification}</li>
+              ))}
+            </ul>
+          </div>
+        </article>
       </div>
     </section>
   );

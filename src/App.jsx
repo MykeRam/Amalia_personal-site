@@ -1,22 +1,15 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import {
-  sections,
-  heroContent,
-  aboutCards,
-  galleryFilters,
-  galleryItems
-} from "./siteContent";
+import { sections, heroContent, aboutContent, calendlyContent } from "./siteContent";
 import SiteHeader from "./components/SiteHeader";
 import Hero from "./components/Hero";
 import AboutSection from "./components/AboutSection";
-import GallerySection from "./components/GallerySection";
+import CalendlySection from "./components/CalendlySection";
 import SiteFooter from "./components/SiteFooter";
 import "./App.css";
 
 function App() {
   const [activeSection, setActiveSection] = useState("top");
-  const [activeFilter, setActiveFilter] = useState("all");
 
   useEffect(() => {
     const observedSections = sections
@@ -51,7 +44,10 @@ function App() {
       return;
     }
 
-    const headerOffset = 88;
+    const sectionOffsets = {
+      about: 24
+    };
+    const headerOffset = sectionOffsets[sectionId] ?? 88;
     const top = section.getBoundingClientRect().top + window.scrollY - headerOffset;
 
     window.scrollTo({
@@ -59,11 +55,6 @@ function App() {
       behavior: "smooth"
     });
   };
-
-  const visibleGalleryItems =
-    activeFilter === "all"
-      ? galleryItems
-      : galleryItems.filter((item) => item.category === activeFilter);
 
   return (
     <div className="page-shell">
@@ -74,13 +65,8 @@ function App() {
       />
       <main>
         <Hero content={heroContent} onNavigate={handleNavigate} />
-        <AboutSection cards={aboutCards} />
-        <GallerySection
-          filters={galleryFilters}
-          items={visibleGalleryItems}
-          activeFilter={activeFilter}
-          onFilterChange={setActiveFilter}
-        />
+        <AboutSection content={aboutContent} />
+        <CalendlySection content={calendlyContent} />
       </main>
       <SiteFooter />
     </div>

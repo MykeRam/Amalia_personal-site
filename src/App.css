@@ -1,10 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&display=swap");
 
 :root {
-  --sky-top: #fff4d7;
-  --sky-mid: #f4d9b9;
-  --sky-bottom: #d9e9f3;
-  --cloud: rgba(255, 255, 255, 0.76);
+  --page-bg: #f2e7d6;
   --navy: #14324a;
   --navy-deep: #0b2233;
   --gold: #b47c2f;
@@ -28,22 +25,7 @@ body {
   min-height: 100vh;
   font-family: "Manrope", "Avenir Next", "Segoe UI", sans-serif;
   color: var(--navy-deep);
-  background:
-    radial-gradient(circle at top left, var(--cloud), transparent 28%),
-    radial-gradient(circle at 85% 18%, rgba(255, 255, 255, 0.72), transparent 20%),
-    linear-gradient(180deg, var(--sky-top) 0%, var(--sky-mid) 36%, var(--sky-bottom) 100%);
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(20, 50, 74, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(20, 50, 74, 0.05) 1px, transparent 1px);
-  background-size: 42px 42px;
-  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.42), transparent 78%);
-  pointer-events: none;
+  background: var(--page-bg);
 }
 
 a {
