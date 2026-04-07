@@ -16,17 +16,53 @@ function AboutSection({ content }) {
       </div>
 
       <div className="about-layout">
-        <figure className="about-portrait-wrap">
-          <img
-            className="about-portrait"
-            src={content.imageSrc}
-            alt={content.imageAlt}
-          />
-        </figure>
+        <div className="about-portrait-column">
+          <figure className="about-portrait-wrap">
+            <img
+              className="about-portrait"
+              src={content.imageSrc}
+              alt={content.imageAlt}
+            />
+          </figure>
+
+          <a
+            className="about-linkedin"
+            href={content.linkedinUrl}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Amalia LinkedIn profile"
+          >
+            <img
+              className="about-linkedin-icon"
+              src="/assets/linkedin-logo.svg"
+              alt=""
+            />
+          </a>
+        </div>
 
         <article className="about-copy">
-          {content.paragraphs.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
+          {content.paragraphs.map((paragraph, paragraphIndex) => (
+            <p key={`paragraph-${paragraphIndex}`}>
+              {typeof paragraph === "string"
+                ? paragraph
+                : paragraph.segments.map((segment, segmentIndex) =>
+                    typeof segment === "string" ? (
+                      <React.Fragment key={`segment-${segmentIndex}`}>
+                        {segment}
+                      </React.Fragment>
+                    ) : (
+                      <a
+                        key={`segment-${segmentIndex}`}
+                        className="about-inline-link"
+                        href={segment.href}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {segment.text}
+                      </a>
+                    )
+                  )}
+            </p>
           ))}
 
           <div className="about-qualifications">

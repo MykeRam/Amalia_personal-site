@@ -12,7 +12,6 @@ function CalendlySection({ content }) {
       ref={ref}
     >
       <div className="section-heading">
-        <p className="eyebrow">{content.eyebrow}</p>
         <h2>{content.title}</h2>
       </div>
 

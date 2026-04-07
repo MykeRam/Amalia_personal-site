@@ -1,9 +1,16 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { sections, heroContent, aboutContent, calendlyContent } from "./siteContent";
+import {
+  sections,
+  heroContent,
+  aboutContent,
+  mediaPressContent,
+  calendlyContent
+} from "./siteContent";
 import SiteHeader from "./components/SiteHeader";
 import Hero from "./components/Hero";
 import AboutSection from "./components/AboutSection";
+import MediaPressSection from "./components/MediaPressSection";
 import CalendlySection from "./components/CalendlySection";
 import SiteFooter from "./components/SiteFooter";
 import "./App.css";
@@ -67,6 +74,7 @@ function App() {
         <Hero content={heroContent} onNavigate={handleNavigate} />
         <AboutSection content={aboutContent} />
         <CalendlySection content={calendlyContent} />
+        <MediaPressSection content={mediaPressContent} />
       </main>
       <SiteFooter />
     </div>

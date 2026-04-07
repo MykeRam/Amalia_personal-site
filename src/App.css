@@ -60,15 +60,6 @@ button {
   transform: translateY(0);
 }
 
-.eyebrow {
-  margin: 0 0 1rem;
-  color: var(--gold);
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-size: 0.82rem;
-  font-weight: 800;
-}
-
 .section-heading {
   display: grid;
   gap: 0.8rem;

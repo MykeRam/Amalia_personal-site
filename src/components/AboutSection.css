@@ -25,6 +25,12 @@
   box-shadow: var(--shadow);
 }
 
+.about-portrait-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .about-portrait-wrap {
   overflow: hidden;
 }
@@ -37,6 +43,34 @@
   object-fit: cover;
 }
 
+.about-linkedin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  margin-top: 0.9rem;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 12px 24px rgba(11, 34, 51, 0.14);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease;
+}
+
+.about-linkedin:hover,
+.about-linkedin:focus-visible {
+  animation: about-linkedin-float 1.15s ease-in-out infinite;
+  background: #f8f5ef;
+  box-shadow: 0 16px 28px rgba(11, 34, 51, 0.18);
+}
+
+.about-linkedin-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 .about-copy p {
   margin: 0;
   line-height: 1.75;
@@ -45,6 +79,17 @@
 
 .about-copy p + p {
   margin-top: 1rem;
+}
+
+.about-inline-link {
+  color: var(--navy);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.about-inline-link:hover,
+.about-inline-link:focus-visible {
+  color: var(--gold);
 }
 
 .about-qualifications {
@@ -67,6 +112,20 @@
 
 .about-qualification-list li + li {
   margin-top: 0.45rem;
+}
+
+@keyframes about-linkedin-float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-3px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 980px) {
