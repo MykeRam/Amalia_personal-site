@@ -52,9 +52,9 @@ export const aboutContent = {
 };
 
 export const calendlyContent = {
-  title: "Student Booking Calendar",
+  title: "Schedule a call below",
   description:
-    "This reserved space will hold the Calendly scheduler once it is configured. The embed area is already sized for a full booking calendar.",
+    "We can discuss your aviation goals and how I can help you achieve them. Whether you're interested in flight training, career guidance, or have questions about the aviation industry, I'm here to provide personalized support and insights.",
   note: "Calendly embed coming soon"
 };
 
