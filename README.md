@@ -89,6 +89,7 @@ npm run preview
 - Page structure is split into reusable React components in `src/components/`
 - Styling is organized into component-level CSS files
 - Static images, icons, and video assets live in `public/assets/`
+- Hero video assets are sourced from [Vecteezy](https://www.vecteezy.com/)
 
 ## Deployment
 
