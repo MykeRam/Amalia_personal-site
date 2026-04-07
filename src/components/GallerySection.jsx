@@ -13,8 +13,8 @@ function GallerySection({ filters, items, activeFilter, onFilterChange }) {
     >
       <div className="section-heading section-heading-gallery">
         <div>
-          <p className="eyebrow">Ipsum</p>
-          <h2>Lorem ipsum dolor sit amet.</h2>
+          <p className="eyebrow">Gallery Section</p>
+          <h2>Gallery</h2>
         </div>
         <p className="section-intro">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -22,7 +22,7 @@ function GallerySection({ filters, items, activeFilter, onFilterChange }) {
         </p>
       </div>
 
-      <div className="gallery-toolbar" role="toolbar" aria-label="Lorem ipsum filters">
+      <div className="gallery-toolbar" role="toolbar" aria-label="Gallery filters">
         {filters.map((filter) => (
           <button
             key={filter.id}
@@ -37,7 +37,7 @@ function GallerySection({ filters, items, activeFilter, onFilterChange }) {
       </div>
 
       <div className="gallery-status" aria-live="polite">
-        Lorem {items.length} ipsum
+        Showing {items.length} {items.length === 1 ? "item" : "items"}
       </div>
 
       <div className="gallery-grid">

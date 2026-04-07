@@ -1,17 +1,19 @@
 export const sections = [
-  { id: "top", label: "Lorem" },
-  { id: "about", label: "Ipsum" },
-  { id: "gallery", label: "Dolor" }
+  { id: "top", label: "Home" },
+  { id: "about", label: "About" },
+  { id: "gallery", label: "Gallery" }
 ];
 
 export const heroContent = {
-  eyebrow: "Lorem Ipsum Dolor",
-  fullName: "Lorem Amalia",
+  eyebrow: "Hero Section",
+  fullName: "Amalia Andaverde",
   title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   description:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  bookingLabel: "Lorem Ipsum",
+  bookingLabel: "Book a Call",
   bookingLink: "",
+  portraitSrc: "/assets/amalia-about.avif",
+  portraitAlt: "Portrait of Amalia Andaverde",
   posterSrc: "/assets/plane-boeing.jpg",
   videoSources: [
     "/assets/vecteezy_advanced-camera-drone-hovering-over-a-picturesque-river_71293716.mp4",
@@ -46,17 +48,17 @@ export const aboutCards = [
 ];
 
 export const galleryFilters = [
-  { id: "all", label: "Lorem" },
-  { id: "flight-deck", label: "Ipsum" },
-  { id: "journey", label: "Dolor" },
-  { id: "mentorship", label: "Amet" }
+  { id: "all", label: "All" },
+  { id: "flight-deck", label: "Flight Deck" },
+  { id: "journey", label: "Journey" },
+  { id: "mentorship", label: "Mentorship" }
 ];
 
 export const galleryItems = [
   {
     id: "regional-ops",
     category: "flight-deck",
-    categoryLabel: "Ipsum",
+    categoryLabel: "Flight Deck",
     title: "Lorem ipsum dolor sit amet",
     description:
       "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -67,7 +69,7 @@ export const galleryItems = [
   {
     id: "training-path",
     category: "journey",
-    categoryLabel: "Dolor",
+    categoryLabel: "Journey",
     title: "Ut enim ad minim veniam",
     description:
       "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -78,7 +80,7 @@ export const galleryItems = [
   {
     id: "student-focus",
     category: "mentorship",
-    categoryLabel: "Amet",
+    categoryLabel: "Mentorship",
     title: "Duis aute irure dolor",
     description:
       "In reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
@@ -89,7 +91,7 @@ export const galleryItems = [
   {
     id: "professional-presence",
     category: "flight-deck",
-    categoryLabel: "Ipsum",
+    categoryLabel: "Flight Deck",
     title: "Excepteur sint occaecat",
     description:
       "Cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -100,7 +102,7 @@ export const galleryItems = [
   {
     id: "why-aviation",
     category: "journey",
-    categoryLabel: "Dolor",
+    categoryLabel: "Journey",
     title: "Sed ut perspiciatis unde",
     description:
       "Omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",
@@ -111,7 +113,7 @@ export const galleryItems = [
   {
     id: "next-generation",
     category: "mentorship",
-    categoryLabel: "Amet",
+    categoryLabel: "Mentorship",
     title: "Eaque ipsa quae ab illo",
     description:
       "Inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",

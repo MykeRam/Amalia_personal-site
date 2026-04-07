@@ -12,8 +12,8 @@ function AboutSection({ cards }) {
       ref={ref}
     >
       <div className="section-heading">
-        <p className="eyebrow">Lorem</p>
-        <h2>Lorem ipsum dolor sit amet.</h2>
+        <p className="eyebrow">About Section</p>
+        <h2>About</h2>
       </div>
 
       <div className="about-grid">
