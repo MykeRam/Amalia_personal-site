@@ -77,11 +77,9 @@
   transition:
     transform 180ms ease,
     opacity 180ms ease;
-  opacity: 0.5;
+  opacity: 0;
 }
 
-.site-nav-link:hover::after,
-.site-nav-link:focus-visible::after,
 .site-nav-link.is-active::after {
   transform: scaleX(1);
   opacity: 1;
