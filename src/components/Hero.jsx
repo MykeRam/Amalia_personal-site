@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import useReveal from "../hooks/useReveal";
 import "./Hero.css";
 
@@ -6,6 +6,7 @@ function Hero({ content, onNavigate }) {
   const { ref, isVisible } = useReveal();
   const [activeVideoIndex, setActiveVideoIndex] = useState(0);
   const hasVideos = Array.isArray(content.videoSources) && content.videoSources.length > 0;
+  const videoRefs = useRef([]);
   const heroMediaStyle = content.posterSrc
     ? {
         backgroundImage: `linear-gradient(180deg, rgba(7, 18, 29, 0.12), rgba(7, 18, 29, 0.62)), url(${content.posterSrc})`
@@ -13,17 +14,27 @@ function Hero({ content, onNavigate }) {
     : undefined;
 
   useEffect(() => {
-    if (!hasVideos || content.videoSources.length < 2) {
-      return undefined;
+    if (!hasVideos) {
+      return;
     }
 
-    const rotationMs = content.videoRotateMs ?? 7000;
-    const intervalId = window.setInterval(() => {
-      setActiveVideoIndex((currentIndex) => (currentIndex + 1) % content.videoSources.length);
-    }, rotationMs);
+    videoRefs.current.forEach((video, index) => {
+      if (!video) {
+        return;
+      }
 
-    return () => window.clearInterval(intervalId);
-  }, [content.videoRotateMs, content.videoSources, hasVideos]);
+      if (index === activeVideoIndex) {
+        video.currentTime = 0;
+        const playPromise = video.play();
+
+        if (playPromise && typeof playPromise.catch === "function") {
+          playPromise.catch(() => {});
+        }
+      } else {
+        video.pause();
+      }
+    });
+  }, [activeVideoIndex, hasVideos]);
 
   const handlePrimaryAction = () => {
     if (content.bookingLink) {
@@ -32,6 +43,14 @@ function Hero({ content, onNavigate }) {
     }
 
     onNavigate("calendar");
+  };
+
+  const handleVideoEnded = () => {
+    if (!hasVideos || content.videoSources.length < 2) {
+      return;
+    }
+
+    setActiveVideoIndex((currentIndex) => (currentIndex + 1) % content.videoSources.length);
   };
 
   return (
@@ -53,12 +72,15 @@ function Hero({ content, onNavigate }) {
             {content.videoSources.map((videoSrc, index) => (
               <video
                 key={videoSrc}
+                ref={(node) => {
+                  videoRefs.current[index] = node;
+                }}
                 className={`hero-video${index === activeVideoIndex ? " is-active" : ""}`}
-                autoPlay
                 muted
-                loop
                 playsInline
                 preload="metadata"
+                loop={content.videoSources.length === 1}
+                onEnded={index === activeVideoIndex ? handleVideoEnded : undefined}
               >
                 <source src={videoSrc} type="video/mp4" />
               </video>

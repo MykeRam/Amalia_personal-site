@@ -21,7 +21,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  z-index: 0;
+  z-index: 1;
   background:
     linear-gradient(180deg, rgba(6, 17, 27, 0.12), rgba(6, 17, 27, 0.6)),
     linear-gradient(135deg, rgba(18, 40, 58, 0.28) 0%, rgba(45, 98, 132, 0.18) 44%, rgba(241, 193, 118, 0.12) 100%);
@@ -40,7 +40,7 @@
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 900ms ease;
+  transition: opacity 900ms ease-in-out;
 }
 
 .hero-video.is-active {
@@ -88,7 +88,7 @@
 
 .hero-overlay {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
