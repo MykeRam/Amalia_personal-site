@@ -1,3 +1,5 @@
+const assetPath = (fileName) => `${import.meta.env.BASE_URL}assets/${fileName}`;
+
 export const sections = [
   { id: "top", label: "Home" },
   { id: "about", label: "About" },
@@ -12,18 +14,18 @@ export const heroContent = {
     "Preparing the next generation of pilots through disciplined, personalized, and results-driven aviation instruction",
   bookingLabel: "Schedule a Consultation",
   bookingLink: "",
-  posterSrc: "/assets/plane-boeing.jpg",
+  posterSrc: assetPath("plane-boeing.jpg"),
   videoSources: [
-    "/assets/vecteezy_advanced-camera-drone-hovering-over-a-picturesque-river_71293716.mp4",
-    "/assets/vecteezy_amsterdam-the-netherlands-july-25-2017-klm-royal-dutch_28208780.mp4",
-    "/assets/vecteezy_rear-view-of-jet-plane-landing-glare-of-the-sun-reflection_8588534.mp4"
+    assetPath("vecteezy_advanced-camera-drone-hovering-over-a-picturesque-river_71293716.mp4"),
+    assetPath("vecteezy_amsterdam-the-netherlands-july-25-2017-klm-royal-dutch_28208780.mp4"),
+    assetPath("vecteezy_rear-view-of-jet-plane-landing-glare-of-the-sun-reflection_8588534.mp4")
   ],
   videoRotateMs: 7000,
   imageAlt: "Airplane in flight"
 };
 
 export const aboutContent = {
-  imageSrc: "/assets/amalia-about.avif",
+  imageSrc: assetPath("amalia-about.avif"),
   imageAlt: "Portrait of Amalia Andaverde",
   linkedinUrl: "https://www.linkedin.com/in/amalia-andaverde/",
   paragraphs: [

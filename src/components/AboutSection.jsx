@@ -4,6 +4,7 @@ import "./AboutSection.css";
 
 function AboutSection({ content }) {
   const { ref, isVisible } = useReveal();
+  const linkedinIconSrc = `${import.meta.env.BASE_URL}assets/linkedin-logo.svg`;
 
   return (
     <section
@@ -34,7 +35,7 @@ function AboutSection({ content }) {
           >
             <img
               className="about-linkedin-icon"
-              src="/assets/linkedin-logo.svg"
+              src={linkedinIconSrc}
               alt=""
             />
           </a>
