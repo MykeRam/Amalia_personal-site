@@ -1,9 +1,10 @@
+import React from "react";
 import "./SiteFooter.css";
 
 function SiteFooter() {
   return (
     <footer className="site-footer">
-      <p>© {new Date().getFullYear()} Amalia. More sections coming soon.</p>
+      <p>© {new Date().getFullYear()} Lorem ipsum dolor sit amet.</p>
     </footer>
   );
 }

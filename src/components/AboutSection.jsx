@@ -1,3 +1,4 @@
+import React from "react";
 import useReveal from "../hooks/useReveal";
 import "./AboutSection.css";
 
@@ -11,8 +12,8 @@ function AboutSection({ cards }) {
       ref={ref}
     >
       <div className="section-heading">
-        <p className="eyebrow">About</p>
-        <h2>A strong foundation for her story.</h2>
+        <p className="eyebrow">Lorem</p>
+        <h2>Lorem ipsum dolor sit amet.</h2>
       </div>
 
       <div className="about-grid">

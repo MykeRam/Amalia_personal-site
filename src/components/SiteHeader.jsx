@@ -1,3 +1,4 @@
+import React from "react";
 import "./SiteHeader.css";
 
 function SiteHeader({ sections, activeSection, onNavigate }) {
@@ -26,6 +27,10 @@ function SiteHeader({ sections, activeSection, onNavigate }) {
           </button>
         ))}
       </nav>
+
+      <button className="login-button" type="button">
+        Log In
+      </button>
     </header>
   );
 }

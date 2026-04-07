@@ -1,20 +1,25 @@
 export const sections = [
-  { id: "top", label: "Home" },
-  { id: "about", label: "About" },
-  { id: "gallery", label: "Gallery" }
+  { id: "top", label: "Lorem" },
+  { id: "about", label: "Ipsum" },
+  { id: "gallery", label: "Dolor" }
 ];
 
 export const heroContent = {
-  eyebrow: "Piedmont Airlines First Officer",
-  fullName: "Amalia",
-  title: "Poised in the cockpit, grounded in purpose.",
+  eyebrow: "Lorem Ipsum Dolor",
+  fullName: "Lorem Amalia",
+  title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   description:
-    "Aviation professional, mentor in the making, and a steady presence in the flight deck.",
-  bookingLabel: "Book a Call",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  bookingLabel: "Lorem Ipsum",
   bookingLink: "",
-  imageSrc:
-    "https://images.unsplash.com/photo-1747751994930-c1e2f52a4577?auto=format&fit=crop&w=1800&q=80",
-  imageAlt: "Passenger airplane flying through a clear blue sky"
+  posterSrc: "/assets/plane-boeing.jpg",
+  videoSources: [
+    "/assets/vecteezy_advanced-camera-drone-hovering-over-a-picturesque-river_71293716.mp4",
+    "/assets/vecteezy_amsterdam-the-netherlands-july-25-2017-klm-royal-dutch_28208780.mp4",
+    "/assets/vecteezy_rear-view-of-jet-plane-landing-glare-of-the-sun-reflection_8588534.mp4"
+  ],
+  videoRotateMs: 7000,
+  imageAlt: "Airplane in flight"
 };
 
 export const aboutCards = [
@@ -22,95 +27,95 @@ export const aboutCards = [
     title: null,
     featured: true,
     paragraphs: [
-      "Amalia is a female First Officer with Piedmont Airlines, building a career defined by preparation, professionalism, and a steady presence in high-responsibility environments.",
-      "This first version of the site is intentionally focused. It gives her a polished online home now, while leaving room to expand into flight milestones, personal achievements, and practical guidance for aspiring pilots."
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     ]
   },
   {
-    title: "What this site will grow into",
+    title: "Lorem ipsum dolor",
     paragraphs: [
-      "Over time, this page can expand into a fuller personal brand: aviation experience, photos, achievements, and curated resources for students looking for direction."
+      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
     ]
   },
   {
-    title: "Suggested next content",
+    title: "Sit amet consectetur",
     paragraphs: [
-      "Add her training path, licenses or ratings, key career moments, and a short personal note on why aviation matters to her."
+      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     ]
   }
 ];
 
 export const galleryFilters = [
-  { id: "all", label: "All" },
-  { id: "flight-deck", label: "Flight Deck" },
-  { id: "journey", label: "Journey" },
-  { id: "mentorship", label: "Mentorship" }
+  { id: "all", label: "Lorem" },
+  { id: "flight-deck", label: "Ipsum" },
+  { id: "journey", label: "Dolor" },
+  { id: "mentorship", label: "Amet" }
 ];
 
 export const galleryItems = [
   {
     id: "regional-ops",
     category: "flight-deck",
-    categoryLabel: "Flight Deck",
-    title: "Regional operations with a composed cockpit rhythm",
+    categoryLabel: "Ipsum",
+    title: "Lorem ipsum dolor sit amet",
     description:
-      "A snapshot of the discipline, communication, and pace required to keep every phase of flight precise.",
-    detail: "Crew coordination",
+      "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    detail: "Lorem detail",
     tone: "sunrise",
     size: "wide"
   },
   {
     id: "training-path",
     category: "journey",
-    categoryLabel: "Journey",
-    title: "A training path built on repetition and readiness",
+    categoryLabel: "Dolor",
+    title: "Ut enim ad minim veniam",
     description:
-      "This card can later hold ratings, milestones, and the sequence that shaped her aviation career.",
-    detail: "Ratings and milestones",
+      "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    detail: "Ipsum detail",
     tone: "atlas",
     size: "standard"
   },
   {
     id: "student-focus",
     category: "mentorship",
-    categoryLabel: "Mentorship",
-    title: "A future home for practical student guidance",
+    categoryLabel: "Amet",
+    title: "Duis aute irure dolor",
     description:
-      "The site is positioned to evolve into a resource hub with direct advice for aspiring pilots.",
-    detail: "Student resources",
+      "In reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    detail: "Dolor detail",
     tone: "cloudline",
     size: "standard"
   },
   {
     id: "professional-presence",
     category: "flight-deck",
-    categoryLabel: "Flight Deck",
-    title: "Professional presence under pressure",
+    categoryLabel: "Ipsum",
+    title: "Excepteur sint occaecat",
     description:
-      "A place to feature the habits that matter most in airline flying: preparation, calm, and consistency.",
-    detail: "Decision-making",
+      "Cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    detail: "Amet detail",
     tone: "dusk",
     size: "standard"
   },
   {
     id: "why-aviation",
     category: "journey",
-    categoryLabel: "Journey",
-    title: "Why aviation matters to her",
+    categoryLabel: "Dolor",
+    title: "Sed ut perspiciatis unde",
     description:
-      "This tile can become a more personal note about motivation, ambition, and the meaning behind the career.",
-    detail: "Personal story",
+      "Omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",
+    detail: "Sit detail",
     tone: "contrail",
     size: "standard"
   },
   {
     id: "next-generation",
     category: "mentorship",
-    categoryLabel: "Mentorship",
-    title: "Opening the door for the next generation",
+    categoryLabel: "Amet",
+    title: "Eaque ipsa quae ab illo",
     description:
-      "A gallery card reserved for future mentoring efforts, outreach, and visibility in aviation spaces.",
-    detail: "Representation",
+      "Inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+    detail: "Elit detail",
     tone: "golden-hour",
     size: "wide"
   }

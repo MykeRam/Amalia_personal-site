@@ -1,3 +1,4 @@
+import React from "react";
 import useReveal from "../hooks/useReveal";
 import "./GallerySection.css";
 
@@ -12,17 +13,16 @@ function GallerySection({ filters, items, activeFilter, onFilterChange }) {
     >
       <div className="section-heading section-heading-gallery">
         <div>
-          <p className="eyebrow">Gallery</p>
-          <h2>Moments, themes, and future storylines.</h2>
+          <p className="eyebrow">Ipsum</p>
+          <h2>Lorem ipsum dolor sit amet.</h2>
         </div>
         <p className="section-intro">
-          The gallery is already wired for filtering, so it can grow from visual placeholders
-          into real photos, milestones, and student-facing resources without changing the page
-          structure.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua.
         </p>
       </div>
 
-      <div className="gallery-toolbar" role="toolbar" aria-label="Gallery filters">
+      <div className="gallery-toolbar" role="toolbar" aria-label="Lorem ipsum filters">
         {filters.map((filter) => (
           <button
             key={filter.id}
@@ -37,7 +37,7 @@ function GallerySection({ filters, items, activeFilter, onFilterChange }) {
       </div>
 
       <div className="gallery-status" aria-live="polite">
-        Showing {items.length} {items.length === 1 ? "tile" : "tiles"}
+        Lorem {items.length} ipsum
       </div>
 
       <div className="gallery-grid">
