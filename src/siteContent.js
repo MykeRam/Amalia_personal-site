@@ -7,10 +7,10 @@ export const sections = [
 export const heroContent = {
   eyebrow: "Hero Section",
   fullName: "Amalia Andaverde",
-  title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  title: "Aviation Professional specializing in pilot training, flight instruction, and student development",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  bookingLabel: "Book a Call",
+    "Preparing the next generation of pilots through disciplined, personalized, and results-driven aviation instruction",
+  bookingLabel: "Schedule a Consultation",
   bookingLink: "",
   posterSrc: "/assets/plane-boeing.jpg",
   videoSources: [

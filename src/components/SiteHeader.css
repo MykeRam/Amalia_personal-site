@@ -50,7 +50,7 @@
 .site-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 2.5rem;
   margin-left: auto;
 }
 
@@ -61,6 +61,7 @@
   background: transparent;
   color: rgba(11, 34, 51, 0.72);
   cursor: pointer;
+  transition: transform 180ms ease;
 }
 
 .site-nav-link::after {
@@ -84,6 +85,11 @@
 .site-nav-link.is-active::after {
   transform: scaleX(1);
   opacity: 1;
+}
+
+.site-nav-link:hover,
+.site-nav-link:focus-visible {
+  animation: nav-float 1.15s ease-in-out infinite;
 }
 
 .site-nav-link.is-active {
@@ -114,6 +120,20 @@
   transform: translateY(-2px);
   background: #183d59;
   box-shadow: 0 14px 28px rgba(11, 34, 51, 0.1);
+}
+
+@keyframes nav-float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-3px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 640px) {
