@@ -1,15 +1,24 @@
 # Amalia Personal Site
 
-Single-page personal website for Amalia Andaverde. The site is built as a React-based landing page with a full-screen video hero, an About section, and a reserved calendar section for a future Calendly embed.
+A single-page React website for Amalia Andaverde, designed as a professional aviation-focused personal brand site. The current experience features a full-screen video hero, an About section, a booking area reserved for Calendly, and a Media & Press section for interviews and coverage.
 
-## Current Sections
+## Current Experience
 
-- Hero section with rotating background video
+- Full-screen hero with background video playback
 - About section with portrait, biography, and qualifications
-- Calendar section placeholder for future scheduling
-- Header navigation with smooth scrolling
+- Booking section reserved for a future Calendly integration
+- Media & Press section with featured interviews and coverage
+- Sticky header navigation with smooth scrolling and active-section state
 
-## Technologies and Tools Used
+## Planned Student Features
+
+- Student log in and sign up experience
+- Protected student area for study resources
+- Dedicated study guide library available after account creation and sign-in
+- Selectable study-category checkboxes so students can identify what they are currently working on
+- Category-based access to the most relevant study guides based on those selections
+
+## Technologies and Tools
 
 - React 18
 - React DOM
@@ -17,9 +26,10 @@ Single-page personal website for Amalia Andaverde. The site is built as a React-
 - JavaScript (ES modules)
 - CSS
 - HTML5
-- Intersection Observer API for section visibility state
+- Intersection Observer API for active section tracking and reveal behavior
+- GitHub Pages for deployment
 - Git and GitHub for version control
-- FFmpeg for video compression and audio removal on hero assets
+- FFmpeg for hero video compression and audio removal
 
 ## Project Structure
 
@@ -29,6 +39,7 @@ src/
     AboutSection.jsx
     CalendlySection.jsx
     Hero.jsx
+    MediaPressSection.jsx
     SiteFooter.jsx
     SiteHeader.jsx
   hooks/
@@ -40,6 +51,10 @@ src/
 
 public/
   assets/
+
+.github/
+  workflows/
+    deploy.yml
 ```
 
 ## Getting Started
@@ -50,19 +65,19 @@ Install dependencies:
 npm install
 ```
 
-Start the development server:
+Run the development server:
 
 ```bash
 npm run dev
 ```
 
-Build for production:
+Create a production build:
 
 ```bash
 npm run build
 ```
 
-Preview the production build:
+Preview the production build locally:
 
 ```bash
 npm run preview
@@ -70,13 +85,19 @@ npm run preview
 
 ## Content and Assets
 
-- Main editable page copy lives in `src/siteContent.js`
-- Component markup lives in `src/components/`
-- Component-specific styling is split into individual `.css` files
-- Static media lives in `public/assets/`
+- Main site content is managed in `src/siteContent.js`
+- Page structure is split into reusable React components in `src/components/`
+- Styling is organized into component-level CSS files
+- Static images, icons, and video assets live in `public/assets/`
+
+## Deployment
+
+- The site is configured for GitHub Pages deployment through GitHub Actions
+- Vite uses the repository base path required for project-page deployments
+- Production output is generated in `dist/` and deployed by `.github/workflows/deploy.yml`
 
 ## Notes
 
-- The hero uses locally stored compressed MP4 videos
-- The calendar area is a placeholder until Calendly is configured
-- Navigation uses smooth scrolling to jump between sections
+- Hero videos are compressed local MP4 assets with audio removed for faster loading
+- The booking section is currently a placeholder until Calendly is configured
+- The student resource workflow is planned but not yet implemented
