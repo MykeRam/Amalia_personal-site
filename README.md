@@ -104,4 +104,5 @@ npm run preview
 - The student resource workflow is planned but not yet implemented
 - Student login uses a passwordless email-link modal on the public site and a logged-in student dashboard at `#student-dashboard`
 - The frontend expects `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`, `VITE_STUDENT_LOGIN_ENDPOINT`, and optionally `VITE_STUDENT_LOGIN_HELP_EMAIL`
+- The student login Edge Function expects a Supabase secret named `SERVICE_ROLE_KEY` plus `SITE_URL`
 - The login endpoint should verify the submitted email against a `students` allowlist table before sending the magic link
