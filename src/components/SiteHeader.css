@@ -130,7 +130,7 @@
     transform 520ms ease,
     box-shadow 520ms ease,
     background-color 520ms ease;
-  animation: login-button-glow 780ms ease-out 1180ms 1;
+  animation: login-button-glow 61s linear 940ms 1 forwards;
 }
 
 .login-button:hover,
@@ -167,14 +167,22 @@
 }
 
 @keyframes login-button-glow {
-  0%,
-  100% {
+  0% {
     background-color: var(--navy-deep);
     border-color: rgba(20, 50, 74, 0.14);
     box-shadow: none;
   }
 
-  40% {
+  2% {
+    background-color: #f1d96a;
+    border-color: rgba(241, 217, 106, 0.85);
+    box-shadow:
+      0 0 0 7px rgba(241, 217, 106, 0.12),
+      0 0 34px rgba(241, 217, 106, 0.52);
+  }
+
+  3%,
+  98% {
     background-color: #e4bf43;
     border-color: rgba(228, 191, 67, 0.72);
     box-shadow:
@@ -182,12 +190,10 @@
       0 0 28px rgba(228, 191, 67, 0.58);
   }
 
-  60% {
-    background-color: #f1d96a;
-    border-color: rgba(241, 217, 106, 0.85);
-    box-shadow:
-      0 0 0 7px rgba(241, 217, 106, 0.12),
-      0 0 34px rgba(241, 217, 106, 0.52);
+  100% {
+    background-color: var(--navy-deep);
+    border-color: rgba(20, 50, 74, 0.14);
+    box-shadow: none;
   }
 }
 
