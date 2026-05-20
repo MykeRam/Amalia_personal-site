@@ -130,7 +130,7 @@
     transform 520ms ease,
     box-shadow 520ms ease,
     background-color 520ms ease;
-  animation: login-button-glow 61s linear 940ms 1 forwards;
+  animation: login-button-glow 31s linear 940ms 1 forwards;
 }
 
 .login-button:hover,
@@ -181,8 +181,8 @@
       0 0 34px rgba(241, 217, 106, 0.52);
   }
 
-  3%,
-  98% {
+  2%,
+  99% {
     background-color: #e4bf43;
     border-color: rgba(228, 191, 67, 0.72);
     box-shadow:
