@@ -112,8 +112,7 @@
 
 .site-nav-link:hover,
 .site-nav-link:focus-visible {
-  transform: translateY(-2px);
-  color: var(--navy-deep);
+  color: rgba(11, 34, 51, 0.42);
 }
 
 .login-button {
