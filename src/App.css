@@ -86,6 +86,11 @@ h3 {
     scroll-behavior: auto;
   }
 
+  .site-nav-link {
+    opacity: 1;
+    transform: none;
+  }
+
   *,
   *::before,
   *::after {
