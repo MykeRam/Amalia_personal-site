@@ -1,7 +1,7 @@
 import React from "react";
 import "./SiteHeader.css";
 
-function SiteHeader({ sections, activeSection, onNavigate }) {
+function SiteHeader({ sections, activeSection, onNavigate, onStudentLoginClick, isStudentLoginOpen }) {
   return (
     <header className="site-header">
       <div className="site-header-inner">
@@ -29,7 +29,13 @@ function SiteHeader({ sections, activeSection, onNavigate }) {
           ))}
         </nav>
 
-        <button className="login-button" type="button">
+        <button
+          className="login-button"
+          type="button"
+          onClick={onStudentLoginClick}
+          aria-haspopup="dialog"
+          aria-expanded={isStudentLoginOpen ? "true" : "false"}
+        >
           Student Log In
         </button>
       </div>
